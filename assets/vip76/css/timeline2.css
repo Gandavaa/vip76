@@ -1,0 +1,198 @@
+/*Timeline v2
+------------------------------------*/
+.timeline-v2 {
+	padding: 0;
+	list-style: none;
+	position: relative;
+} 
+
+/* The line */
+.timeline-v2 > li{
+	position: relative;
+	/*cursor: pointer;*/
+}
+
+.timeline-v2:before {
+	top: 0;
+	bottom: 0;
+	left: 10%;
+	width: 1px;
+	content: '';
+	background: #c42026;
+	position: absolute;
+	/*margin-left: -14px;*/
+}
+
+/* The date/time */
+.timeline-v2 > li .cbp_tmtime {
+	background-color:#fff;
+	display: block;
+	top: 40%;
+	width: 20%;
+	margin:0 auto;
+	position: absolute;
+	/*border: 1px solid black;*/
+	color: #0f5392;
+	text-transform: uppercase;
+}
+
+.timeline-v2 > li .cbp_tmtime span {
+	top: 9px;
+	display: block;
+	text-align: right;
+	position: relative;
+}
+
+.timeline-v2 > li .cbp_tmtime span:first-child {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600 !important;
+
+}
+
+.timeline-v2 > li .cbp_tmtime span:last-child {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 24px;
+	padding-bottom: 10px;
+}
+
+/* Right content */
+.timeline-v2 > li .cbp_tmlabel {
+	color: #24252f;
+	padding: 0;
+	background: #fff;
+	line-height: 1.4;
+	clear: both;
+	position: relative;		
+	margin: 0 0 30px 22%;
+}
+
+/*
+.timeline-v2 > li .cbp_tmlabel img.big-thumb {
+	width: 100%;
+}
+*/
+.timeline-v2 > li .cbp_tmlabel li {
+	padding: 0;	
+}
+
+/*
+.timeline-v2 > li .cbp_tmlabel img.small-thumb {
+	width: 111px;
+	height: auto;
+}
+*/
+
+.timeline-v2 > li .cbp_tmlabel h2 { 
+	font-family: 'PT Sans Narrow';	
+	margin-top: 0px;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 10px 0 0;
+	margin-bottom: 10px;
+	/*border-bottom: 1px solid #ddd;*/
+}
+
+.timeline-v2 > li .cbp_tmlabel h2 > a{
+	color: #242424;	
+}
+
+
+.timeline-v2 > li .cbp_tmlabel h2 > a:hover{
+	text-decoration: none;
+}
+.timeline-v2 > li .cbp_tmlabel .text-left {
+	float: left;
+}
+
+.detail {
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+/* The triangle */
+/*.timeline-v2 > li .cbp_tmlabel:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: #fff;
+	border-width: 10px;
+	top: 18px;
+}
+*/
+/* The icons */
+/*.timeline-v2 > li .cbp_tmicon {
+	top: 22px;
+	left: 22%;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	background: #012b51;
+	margin: 0 0 0 -17px;
+	box-shadow: 0 0 0 4px #d2d2d2;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 50%;
+}*/
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+	.timeline-v2 > li .cbp_tmtime span:last-child {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 47.2em) {
+	.timeline-v2:before {
+		display: none;
+	}
+
+	.timeline-v2 > li .cbp_tmtime {
+		width: 100%;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	.timeline-v2 > li .cbp_tmtime span {
+		text-align: left;
+	}
+
+	.timeline-v2 > li .cbp_tmlabel {
+		padding: 1em;
+		font-weight: 400;
+		margin: 0 0 30px 0;
+		cursor: pointer;
+	}
+
+
+	.timeline-v2 > li .cbp_tmlabel:after {
+		left: 20px;
+		top: -20px;
+		right: auto;
+		border-bottom-color: #f3f3f3;
+		border-right-color: transparent;
+	}
+
+	.timeline-v2 > li .cbp_tmicon {
+		left: auto;
+		float: right;
+		position: relative;
+		margin: -55px 5px 0 0px;
+	}	
+}
+
+/*timeline-v2 within tab-v2 issue issue fix*/
+.timeline-v2 > li .cbp_tmlabel.equal-height-column {
+    height: auto !important;   
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
