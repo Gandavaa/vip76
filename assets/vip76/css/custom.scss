@@ -36,7 +36,6 @@ $main-menu-color-list:  $main-color, '#000';
 
 $main-menu-height: 39px;
 
-
 // funcitons 
 
 // partials
@@ -56,44 +55,44 @@ $main-menu-height: 39px;
     left: 0;
     width: 100%;
     z-index: 99999999;
-}
 
-.topmstatus ul {
-    list-style: none;
-    float: right;
-}
+    .list_horz { 
+        margin-top: 7px;
+    }
+    
+    ul {
+        list-style: none;
+        float: right;
+    }
 
-.topmstatus .list_horz li {
-    float: left;
-    margin-right: 10px;
-}
+    .list_horz li {
+        float: left;
+        margin-right: 10px;
 
-.topmstatus .list_horz li a {    
-    color: $main-color;
-    display: inline-block;
-    text-align: center;
-    width: 110px;    
-}
+        a {    
+            color: $main-color;
+            display: inline-block;
+            text-align: center;
+            width: 110px;    
+        }
+    }
 
-.topmstatus .list_horz { 
-    margin-top: 7px;
-}
+    .user_menu {
+        float: right;
+        font-size: $main-font-size;
+        
+        li:first-child a {
+            border-right: 1px solid $main-color;
+            padding-right: 10px;
+        }
 
-// child menu 
-.topmstatus .user_menu {
-    float: right;
-    font-size: $main-font-size;
-}
-
-.topmstatus .user_menu li:first-child a {
-    border-right: 1px solid #fff;
-    padding-right: 10px;
-}
-
-.topmstatus .user_menu li a {
-    width: auto;
-    border: none;
-    color: $main-color;
+        li a {
+            width: auto;
+            border: none;
+            color: $main-color;
+        }
+    }
+    
 }
 
 .top_font_normal{

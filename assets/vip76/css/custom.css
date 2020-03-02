@@ -10,6 +10,10 @@
   z-index: 99999999;
 }
 
+.topmstatus .list_horz {
+  margin-top: 7px;
+}
+
 .topmstatus ul {
   list-style: none;
   float: right;
@@ -25,10 +29,6 @@
   display: inline-block;
   text-align: center;
   width: 110px;
-}
-
-.topmstatus .list_horz {
-  margin-top: 7px;
 }
 
 .topmstatus .user_menu {
