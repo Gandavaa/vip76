@@ -69,18 +69,6 @@
   float: left;
 }
 
-#top {
-  background: #00315f;
-  padding-top: 55px;
-}
-
-.headbanner {
-  height: 75px;
-  width: 610px;
-  float: right;
-  margin-top: 5px;
-}
-
 .logo .slag {
   position: absolute;
   color: #fff;
@@ -93,6 +81,18 @@
   padding-left: 10px;
   white-space: nowrap;
   font-stretch: expanded;
+}
+
+#top {
+  background: #00315f;
+  padding-top: 55px;
+}
+
+.headbanner {
+  height: 75px;
+  width: 610px;
+  float: right;
+  margin-top: 5px;
 }
 
 #mainmenu {
@@ -159,16 +159,13 @@
 }
 
 #search-control {
-  /* box-shadow: inset 0 2px 3px rgba(0, 0, 0, .12); */
-  border-color: #f1f1f1;
-  background-color: #ffffff;
-  border-radius: 0;
-  background: #fcfcfc;
-  height: 56px;
-  color: #666666;
   display: block;
-  width: 100%;
   position: relative;
+  border-color: #f1f1f1;
+  background-color: #fff;
+  border-radius: 0;
+  height: 56px;
+  width: 100%;
   padding-right: 42.5px !important;
   padding: 6px 12px;
   font-size: 14px;

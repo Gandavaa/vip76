@@ -9,6 +9,8 @@ $main-font-size: 12px;
 
 
 // Үндсэн саарал
+$gray-color-list: #111111;
+
 $gray-color: #484d5b;
 
 // used for sub title 
@@ -17,6 +19,7 @@ $gray-color2:#f5f5f5;
 $title-gray-color1:#24252f;
 $title-gray-color2: #797c85;
 
+$main-border-color: #eeeeee;
 // home title bg, home box-bg: #f5f5f5, 797c85
 // home subtitle bg: #fcfcfc
 // home button bg: #cccccc
@@ -26,7 +29,6 @@ $blue-color: #00315f;
 $blue-color2: #0f5392;
 
 $red-color: #c42026;
-
 
 
 // Navigation bar 
@@ -107,7 +109,6 @@ $main-menu-height: 39px;
 }
 
 /*       BANNER HERE */
-
 .logo {
     position: relative;
     background: url(../img/logo.png?v=1) no-repeat;
@@ -115,14 +116,28 @@ $main-menu-height: 39px;
     display: block;
     width: 200px;
     margin-bottom: 15px;
-    float: left
+    float: left;
+
+    .slag {
+        position: absolute;
+        color: $main-color;
+        font-size: 22px;
+        font-weight:300;
+        text-transform: uppercase;
+        bottom: 15px;
+        top: 30px;
+        left:100%;
+        padding-left: 10px;
+        white-space: nowrap;
+        font-stretch: expanded;
+    }
 }
 
 #top{
-    background: #00315f;
+    background: $blue-color;
     padding-top: 55px;
 }
-
+// HEAD BANNER HERE
 .headbanner{
     height: 75px;
     width: 610px;
@@ -130,72 +145,60 @@ $main-menu-height: 39px;
     margin-top: 5px;
 }
 
-
-.logo .slag {
-    position: absolute;
-    color: #fff;
-    font-size: 22px;
-    font-weight:300;
-    text-transform: uppercase;
-    bottom: 15px;
-    top: 30px;
-    left:100%;
-    padding-left: 10px;
-    white-space: nowrap;
-    font-stretch: expanded;
-}
-
 // Menu here 
 #mainmenu{
-    background: #fff;
-    border-bottom: 2px solid #eeeeee;
+    background:$main-color;
+    border-bottom: 2px solid $main-border-color;
 }
 
-.mainmenu ul {    
-    margin-bottom: 0;
-    list-style-type: none;
-    box-sizing:border-box;    
-}
+.mainmenu{
+    & ul {    
+        margin-bottom: 0;
+        list-style-type: none;
+        box-sizing:border-box;    
 
-.mainmenu ul > li {
-    float: left;
-}
+        & > li {
+            float: left;
+        }
 
-.mainmenu ul li:first-child {
-    border-left: 1px solid #eeeeee;
-}
+        & li:first-child {
+            border-left: 1px solid $main-border-color;
+        }
 
-.mainmenu ul li {
-    border-right: 1px solid #eeeeee;
-}
+        & li {
+            border-right: 1px solid $main-border-color;
+        }
+    }
 
-.mainmenu li {
-    display: block;
-    position:relative;    
-    -webkit-transition: all 300ms linear;
-    transition: all 300ms linear;
-}
+    & li {
+        display: block;
+        position:relative;    
+        -webkit-transition: all 300ms linear;
+        transition: all 300ms linear;
 
-.mainmenu li a {
-    display: block;
-    position: relative;
-    color: #111111;
-    font-size: 14px;
-    font-weight: 700;
-    z-index: 102;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: hand;    
-    padding: 19px 25px 0;
-    height: 56px;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-}
+    & a {
+            display: block;
+            position: relative;
+            color: nth($gray-color-list, 1);
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 102;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: hand;    
+            padding: 19px 25px 0;
+            height: 56px;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
 
-.mainmenu li a:hover{    
-    color:#fff;
-    background-color: #0f5392;
-}
+            &:hover{    
+                color: $main-color;
+                background-color:$blue-color2;
+            }
+        }
+    }
+    
+}     
 
 .search-box{
     float: right;
@@ -208,17 +211,14 @@ $main-menu-height: 39px;
     margin-bottom: 0;
 }
 
-#search-control {
-    /* box-shadow: inset 0 2px 3px rgba(0, 0, 0, .12); */
-    border-color: #f1f1f1;
-    background-color: #ffffff;
-    border-radius: 0;
-    background: #fcfcfc;
-    height: 56px;
-    color: #666666;
+#search-control {    
     display: block;
-    width: 100%;
     position: relative;
+    border-color: #f1f1f1;
+    background-color:$main-color;
+    border-radius: 0;    
+    height: 56px;    
+    width: 100%;
     padding-right: 42.5px !important;
     padding: 6px 12px;
     font-size: 14px;
@@ -250,20 +250,20 @@ $main-menu-height: 39px;
 }
 
 @media (max-width: 768px){
+
     .mainmenu{
         text-align: center;
-    }
+        & ul {
+            display: table;
+            float: none;
+            margin: 0 auto;
 
-    .mainmenu ul {
-        display: table;
-        float: none;
-        margin: 0 auto;
-    }
-
-    .mainmenu ul li a {
-        padding: 7px 7px 0;
-        height: 25px;
-        font-size: 10px;
+            & li a {
+                padding: 7px 7px 0;
+                height: 25px;
+                font-size: 10px;
+            }
+        }
     }
 
     #profile-menu{
